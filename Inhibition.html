@@ -1,0 +1,276 @@
+<!--LINK FROM THE MAIN PAGE (CHECKLIST)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<!--SET THE TABLE TO SEE WHETHER THERE ARE MECHANISMS ABLE TO REDUCE THE CIN -->
+<h4> Is there possibility of CAP erosion due to thermodynamic processes?</h4>
+<table class="table table-dark" >  
+<thead>
+<tr>
+   <th bgcolor="878686"scope="col">Item</th>
+   <th bgcolor="878686"scope="col">Parameter</th>
+   <th bgcolor="878686"scope="col">Yes</th>
+   <th bgcolor="878686"scope="col">No</th>
+</tr>
+</thead>
+<tbody>  
+<tr>
+   <th  scope="row">1</th>
+   <td >Low level moistening</td>
+   <td >
+       <input  type="radio" name="group1" value="#" id="option1.1" onClick="CINreduction();">
+   </td>
+   <td >
+       <input type="radio" name="group1" value="#"id="option1.2" onClick="CINreduction();">
+   </td>
+   </tr>
+   <tr>
+   <th scope="row">2</th>
+   <td>Low level heating</td>
+   <td>
+        <input type="radio" name="group2" value="#" id="option2.1" onClick="CINreduction();">
+   </td>
+   <td>
+      <input type="radio" name="group2" value="#"id="option2.2" onClick="CINreduction();">
+   </td>
+   </tr>
+   </tbody>
+   </table>
+   </body>
+   </body>
+
+   <!--SET THE FUNCTION TO SEE WHETHER THE CIN IS LIKELY TO BE REDUCED OR NOT -->
+
+<script>
+
+function CINreduction() {
+  if  (document.getElementById('option1.1').checked && document.getElementById('option2.1').checked ) {
+      alert("CAP likely to be eroded by LL heating and moistening- CONTINUE ON FORCING FOR ASCENT");
+     }
+     else if (document.getElementById('option1.1').checked && document.getElementById('option2.2').checked ) {
+      alert("CAP likely to be eroded by LL moistening- CONTINUE ON FORCING FOR ASCENT");
+    }
+    else if (document.getElementById('option1.2').checked && document.getElementById('option2.1').checked ) {
+      alert("CAP likely to be eroded by LL heating- CONTINUE ON FORCING FOR ASCENT");
+    }
+    else if (document.getElementById('option1.2').checked && document.getElementById('option2.2').checked ) {
+      alert("Thunderstorms are not likely due to lack of CIN reduction mechanisms - STOP");
+    }
+  else {
+    //DO NOTHING
+      }
+  }
+
+ </script>
+
+
+<!--INSERTED FIGURES SHOWING LOW LEVEL HEATING -->
+<h5>Example of LL heating and moistening</h5>
+<img src="skew1.png" alt="">
+<img src="skew2.png" alt="">
+
+<!--SET UP THE POPUP TO EXPLAIN THE ROLE OF CIN REDUCTION MECHANISMS -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 320px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -130px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
+</head>
+<body style="text-align:center">
+
+<div class="popup" onclick="myFunction1()"><h15 style="color: #2b9ee0" >Click here for info on </h15>
+<h15 style="color: #2b9ee0" >CIN reduction mechanisms </h15>
+<span class="popuptext" id="myPopup"> <!DOCTYPE html>
+<html>
+<body>    
+<h6>Low level heating and moistening do not initiate the thunderstom but favor CI via CIN reduction and ThetaE increse at lower levels. Note on figure the contemporary deepening of the moist layer (moistening) & increase in surface temperatures (heating)</h6> 
+</span>
+</div>
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction1() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+</html>
+
+
+
+
+
+
+
+
+<body>
+              
+  <table class="table table-dark">  
+  <thead>
+  <h4>Severe convective wind gusts - DOWNBURSTS</h4>       
+  <tr>
+  <th bgcolor="878686"scope="col">Item</th>
+  <th bgcolor="878686"scope="col">Parameter</th>
+  <th bgcolor="878686"scope="col">Yes</th>
+  <th bgcolor="878686"scope="col">No</th>
+  </tr>
+  </thead>
+  <tbody>  
+  <tr>
+  <th scope="row">1</th>
+  <td>Favorable Skew-T profile: inverted V</td>
+  <td>
+    <input type="radio" name="group5" value="#" id= "wind1.1" onClick="windpotential();">              
+  </td>
+  <td>
+    <input type="radio" name="group5" value="#" id="wind1.2" onClick="windpotential();">
+  </td>
+  </tr>
+  <tr>
+  <th scope="row">2</th>
+  <td>SurfThetaE-MinimunThetaE>13K</td>
+  <td>
+    <input type="radio" name="group6" value="#" id="wind2.1" onClick="windpotential();">
+  </td>
+  <td>
+    <input type="radio" name="group6" value="#" id="wind2.2" onClick="windpotential();"> 
+ </td>
+ <img src="downburst.png" alt="">
+ <img src="downburst2.png" alt="">
+ </tr>
+ <tr>
+ <th scope="row">3</th>
+ <td>SurfThetaE-MinimunThetaE>20K</td>
+ <td>
+     <input type="radio" name="group7" value="#" id="wind3.1" onClick="windpotential();"> 
+ </td>
+ <td>
+     <input type="radio" name="group7" value="#" id="wind3.2" onClick="windpotential();"> 
+ </td>
+ </tr>
+ </tbody>
+ </table>
+ </body>
+
+ <script type="text/javascript">
+                      
+ function windpotential() {
+    if  (document.getElementById('wind1.1').checked && document.getElementById('wind2.1').checked && document.getElementById('wind3.1').checked) {
+       alert("SCENARIO AGGRAVATION: DOWNBURSTS are likely to occur");
+    }
+    else if (document.getElementById('wind1.1').checked && document.getElementById('wind2.1').checked ) {
+       alert("DOWNBURSTS may be possible");
+    }
+    else if (document.getElementById('wind1.2').checked || (document.getElementById('wind1.1').checked && document.getElementById('wind2.2').checked)) {
+        alert("DOWNBURTSTS are not likely - CONTINUE ON PRECIPITATION THREAT");
+    }
+    else {
+    // DO NOTHING
+    }
+  }
+ </script> 
+
+
+                                     
+                          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+
+
